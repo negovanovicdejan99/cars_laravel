@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -17,6 +16,20 @@ class CarsController extends Controller
         $cars = Car::all();
         return view('cars', compact('cars'));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+     public function showOneCar($id)
+     {
+        $car = Car::findOrFail($id);
+ 
+         return view('car', compact('car'));
+        
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -39,16 +52,6 @@ class CarsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.

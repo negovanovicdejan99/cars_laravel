@@ -3,11 +3,10 @@
         <title>Cars</title>
     </head>
     <body>
+        <h1>Cars:</h1>
         @foreach ($cars as $car)
             <div>
-                <h1>{{$car->title}}</h1>
-                <p>{{$car->producer}}</p>
-                <p>{{$car->number_of_doors}}</p>
+                <a href="cars/{{$car->id}}">{{$car->title}}</a>
             </div>
         @endforeach
     </body>

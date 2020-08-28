@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>About</title>
-    </head>
-    <body>
-        <h1>About us</h1>
-    </body>
-</html>
+@extends('layouts.app')
+@section('title', 'About')
+
+@section('content')
+  <h1>About us</h1>
+@endsection
